@@ -3,7 +3,9 @@ using Engine;
 using Engine.Graphics;
 using Game;
 using Mlfk;
-namespace Command { 
+
+namespace Mlfk
+{ 
 
 public class ClayBlock : Game.ClayBlock, IPaintableBlock
 {

@@ -1,6 +1,6 @@
-using Command;
 using Engine;
 using Game;
+using Mlfk;
 namespace Mlfk
 {
     public class CommandModLoader : ModLoader
@@ -128,14 +128,14 @@ namespace Mlfk
                 m_subsystemCommandDef = GameManager.Project.FindSubsystem<SubsystemCommandDef>();
             }
 
-            Color commandColor = Command.ClayBlock.GetCommandColor(Terrain.ExtractData(value));
-            if (!Command.ClayBlock.IsDefaultColor(commandColor))
+            Color commandColor = Mlfk.ClayBlock.GetCommandColor(Terrain.ExtractData(value));
+            if (!Mlfk.ClayBlock.IsDefaultColor(commandColor))
             {
-                if (block is Command.ClayBlock || block is LeavesBlock)
+                if (block is Mlfk.ClayBlock || block is LeavesBlock)
                 {
                     Color = commandColor;
                 }
-                else if (block is Command.GlassBlock)
+                else if (block is Mlfk.GlassBlock)
                 {
                     FaceTextureSlot = 67;
                     Color = commandColor;

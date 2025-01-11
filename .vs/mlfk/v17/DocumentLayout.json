@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\YYLMZXC\\Desktop\\mod-pach\\netmod-dev\\mlfk\\mlfk\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{457FCB1C-E12D-4D50-94CF-3E10DF83C6D4}|Mlfk.csproj|c:\\users\\yylmzxc\\desktop\\mod-pach\\netmod-dev\\mlfk\\mlfk\\game\\commandblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{457FCB1C-E12D-4D50-94CF-3E10DF83C6D4}|Mlfk.csproj|solutionrelative:game\\commandblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommandBlock.cs",
+              "DocumentMoniker": "C:\\Users\\YYLMZXC\\Desktop\\mod-pach\\netmod-dev\\mlfk\\mlfk\\Game\\CommandBlock.cs",
+              "RelativeDocumentMoniker": "Game\\CommandBlock.cs",
+              "ToolTip": "C:\\Users\\YYLMZXC\\Desktop\\mod-pach\\netmod-dev\\mlfk\\mlfk\\Game\\CommandBlock.cs",
+              "RelativeToolTip": "Game\\CommandBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T17:36:11.281Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
