@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Engine;
 using GameEntitySystem;
 using TemplatesDatabase;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class SubsystemCommandExt : Subsystem, IUpdateable
 	{

@@ -1,7 +1,7 @@
 using Engine;
 using Engine.Graphics;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class LightningStrikeParticleSystem : ParticleSystem<LightningStrikeParticleSystem.Particle>
 	{
@@ -14,7 +14,7 @@ namespace Game
 
 		public PrimitivesRenderer3D m_primitivesRenderer3D = new PrimitivesRenderer3D();
 
-		public Random m_random = new Random();
+		public Game.Random m_random = new Game.Random();
 
 		public LightningStrikeParticleSystem(Vector3 position, Color color)
 			: base(1)

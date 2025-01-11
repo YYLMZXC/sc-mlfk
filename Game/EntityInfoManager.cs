@@ -4,8 +4,8 @@ using Engine;
 using Engine.Graphics;
 using GameEntitySystem;
 using TemplatesDatabase;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class EntityInfoManager
 	{

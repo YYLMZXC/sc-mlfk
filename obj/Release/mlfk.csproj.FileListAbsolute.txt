@@ -1,2 +1,15 @@
 C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\obj\Release\mlfk.csproj.AssemblyReference.cache
 C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\obj\Release\mlfk.csproj.CoreCompileInputs.cache
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\Mlfk.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\Mlfk.pdb
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\Engine.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\EntitySystem.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\LiteNetLib.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\Newtonsoft.Json.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\Survivalcraft.exe
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\System.Memory.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\System.Numerics.Vectors.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\bin\Release\System.Buffers.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\obj\Release\Mlfk.csproj.Up2Date
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\obj\Release\Mlfk.dll
+C:\Users\YYLMZXC\Desktop\mod-pach\netmod-dev\mlfk\mlfk\obj\Release\Mlfk.pdb

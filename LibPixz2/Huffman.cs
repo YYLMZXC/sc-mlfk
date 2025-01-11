@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using Game;
 namespace LibPixz2
 {
 	public class Huffman
@@ -92,7 +92,7 @@ namespace LibPixz2
 			int num = 32;
 			int maxValue = 40;
 			int[] array = new int[num];
-			Random random = new Random((int)DateTime.UtcNow.Ticks);
+            System.Random random = new System.Random((int)DateTime.UtcNow.Ticks);
 			for (int i = 0; i < num; i++)
 			{
 				array[i] += random.Next(maxValue);

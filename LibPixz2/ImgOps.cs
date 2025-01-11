@@ -1,5 +1,5 @@
 using System;
-
+using Game;
 namespace LibPixz2
 {
 	public class ImgOps

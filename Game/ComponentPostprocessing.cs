@@ -1,19 +1,19 @@
 using GameEntitySystem;
 using TemplatesDatabase;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
-	public class ComponentPostprocessing : Component
-	{
-		public ComponentPlayer m_componentPlayer;
+    public class ComponentPostprocessing : Component
+    {
+        public ComponentPlayer m_componentPlayer;
 
-		public override void Load(ValuesDictionary valuesDictionary, IdToEntityMap idToEntityMap)
-		{
-			m_componentPlayer = base.Entity.FindComponent<ComponentPlayer>();
-		}
+        public override void Load(ValuesDictionary valuesDictionary, IdToEntityMap idToEntityMap)
+        {
+            m_componentPlayer = base.Entity.FindComponent<ComponentPlayer>();
+        }
 
-		public void Update(float dt)
-		{
-		}
-	}
+        public void Update(float dt)
+        {
+        }
+    }
 }

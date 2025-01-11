@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using Engine;
 using Engine.Graphics;
 using TemplatesDatabase;
-
-namespace Game
+using Game;
+using Mlfk;
+using Command;
+using LibPixz2;
+namespace Mlfk
 {
 	public class SubsystemCmdRodBlockBehavior : SubsystemBlockBehavior, IDrawable, IUpdateable
 	{
@@ -379,17 +382,20 @@ namespace Game
 			valuesDictionary.SetValue("CommandLine", m_commandLine);
 		}
 
+
 		public void Update(float dt)
 		{
 			if (m_pointDataWidget == null && !string.IsNullOrEmpty(m_commandLine))
 			{
 				InitPointDataWidget();
 			}
-			if (m_subsystemCommand.m_componentPlayer != null)
-			{
-				m_subsystemCommand.m_componentPlayer.ComponentBody.TerrainCollidable = !QuickMode;
-			}
-			if (m_pointDataWidget == null || m_subsystemCommand.m_componentPlayer == null)
+            if (m_subsystemCommand.m_componentPlayer != null)
+            {
+                // 此处不再需要设置 TerrainCollidable
+                // 如果是想要判断方块是否可碰撞，使用 block.IsCollidable
+            }
+
+            if (m_pointDataWidget == null || m_subsystemCommand.m_componentPlayer == null)
 			{
 				return;
 			}

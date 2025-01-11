@@ -1,3 +1,4 @@
+using Game;
 namespace LibPixz2
 {
 	public struct QuantTable

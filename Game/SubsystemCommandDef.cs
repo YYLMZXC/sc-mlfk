@@ -14,8 +14,8 @@ using Engine.Media;
 using GameEntitySystem;
 using TemplatesDatabase;
 using XmlUtilities;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class SubsystemCommandDef : SubsystemCommand, IUpdateable, IDrawable
 	{
@@ -1160,7 +1160,7 @@ namespace Game
 				if (componentFrame != null && componentSpawn != null)
 				{
 					componentFrame.Position = new Vector3(onePoint9) + new Vector3(0.5f, 0f, 0.5f);
-					componentFrame.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, new Random().Float(0f, (float)Math.PI * 2f));
+					componentFrame.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, new Game.Random().Float(0f, (float)Math.PI * 2f));
 					componentSpawn.SpawnDuration = 0f;
 					base.Project.AddEntity(entity);
 				}
@@ -1884,7 +1884,7 @@ namespace Game
 				int num58 = (int)commandData.GetValue("v");
 				for (int num59 = 0; num59 < num58; num59++)
 				{
-					m_subsystemPickables.AddPickable(value12, 1, new Vector3(onePoint13) + new Vector3(new Random().Float(0.4f, 0.6f)), null, null);
+					m_subsystemPickables.AddPickable(value12, 1, new Vector3(onePoint13) + new Vector3(new Game.Random().Float(0.4f, 0.6f)), null, null);
 				}
 				return SubmitResult.Success;
 			});
@@ -2270,7 +2270,7 @@ namespace Game
 						if (flag14 && flag15 && flag16)
 						{
 							cubeArea11.Current.Y = m_subsystemTerrain.Terrain.GetTopHeight(cubeArea11.Current.X, cubeArea11.Current.Z);
-							Vector3 position = new Vector3(cubeArea11.Current) + new Vector3(new Random().Float(0f, 1f));
+							Vector3 position = new Vector3(cubeArea11.Current) + new Vector3(new Game.Random().Float(0f, 1f));
 							m_subsystemParticles.AddParticleSystem(new LightningStrikeParticleSystem(position, color2));
 							subsystemExplosions2.AddExplosion(cubeArea11.Current.X, cubeArea11.Current.Y, cubeArea11.Current.Z, (float)v3, false, false, (PlayerData)null);
 						}
@@ -2287,12 +2287,12 @@ namespace Game
 				m_rainColor = rainColor;
 				if (flag17)
 				{
-					subsystemWeather.GlobalPrecipitationIntensity = 1f;
+					subsystemWeather.PrecipitationIntensity = 1f;
 					subsystemWeather.m_precipitationStartTime = 0.0;
 				}
 				else
 				{
-					subsystemWeather.GlobalPrecipitationIntensity = 0f;
+					subsystemWeather.PrecipitationIntensity = 0f;
 					subsystemWeather.m_precipitationEndTime = 0.0;
 				}
 				return SubmitResult.Success;
@@ -4929,7 +4929,7 @@ namespace Game
 						{
 							m_subsystemParticles.AddParticleSystem(soundParticleSystem);
 						}
-						Vector3 hsv = new Vector3(22.5f * (float)num182 + new Random().Float(0f, 22f), 0.5f + (float)num183 / 30f, 1f);
+						Vector3 hsv = new Vector3(22.5f * (float)num182 + new Game.Random().Float(0f, 22f), 0.5f + (float)num183 / 30f, 1f);
 						soundParticleSystem.AddNote(new Color(Color.HsvToRgb(hsv)));
 					}
 				}
@@ -7174,7 +7174,7 @@ namespace Game
 				if (componentFrame != null && componentSpawn != null)
 				{
 					componentFrame.Position = componentBody.Position;
-					componentFrame.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, new Random().Float(0f, (float)Math.PI * 2f));
+					componentFrame.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, new Game.Random().Float(0f, (float)Math.PI * 2f));
 					componentSpawn.SpawnDuration = 0f;
 					base.Project.AddEntity(entity2);
 					ComponentShapeshifter componentShapeshifter = entity2.FindComponent<ComponentShapeshifter>();

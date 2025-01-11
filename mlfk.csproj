@@ -7,8 +7,8 @@
     <ProjectGuid>{457FCB1C-E12D-4D50-94CF-3E10DF83C6D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mlfk</RootNamespace>
-    <AssemblyName>mlfk</AssemblyName>
+    <RootNamespace>Mlfk</RootNamespace>
+    <AssemblyName>Mlfk</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -143,8 +143,10 @@
     <Compile Include="LibPixz2\QuantTable.cs" />
     <Compile Include="LibPixz2\Rgb.cs" />
     <Compile Include="LibPixz2\YCbCr.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Add\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
+using Game;
 using Engine;
 
-namespace Game
+namespace Mlfk
 {
 	public class MovingEntityBlock
 	{

@@ -1,6 +1,6 @@
 using System.Xml.Linq;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class ManualDetailsWidget : CanvasWidget
 	{

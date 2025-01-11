@@ -4,8 +4,8 @@ using System.Globalization;
 using Engine;
 using Engine.Graphics;
 using TemplatesDatabase;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
 	public class SubsystemCommandBlockBehavior : SubsystemBlockBehavior, IDrawable
 	{
