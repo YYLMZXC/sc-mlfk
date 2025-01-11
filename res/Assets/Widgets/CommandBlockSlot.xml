@@ -1,0 +1,8 @@
+<CanvasWidget xmlns="runtime-namespace:Game" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+	<BevelledButtonWidget Name="BlockSlot.Button" VerticalAlignment="Center" Size="60, 60">
+		<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+		<BlockIconWidget Name="BlockSlot.Icon" Size="60, 60" VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="true"/>
+	</BevelledButtonWidget>
+
+</CanvasWidget>

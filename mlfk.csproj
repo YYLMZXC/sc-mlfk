@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{457FCB1C-E12D-4D50-94CF-3E10DF83C6D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mlfk</RootNamespace>
+    <AssemblyName>mlfk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Engine">
+      <HintPath>dll\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EntitySystem">
+      <HintPath>dll\EntitySystem.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteNetLib">
+      <HintPath>dll\LiteNetLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Survivalcraft">
+      <HintPath>dll\Survivalcraft.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\BirchLeavesBlock.cs" />
+    <Compile Include="Command\ClayBlock.cs" />
+    <Compile Include="Command\GlassBlock.cs" />
+    <Compile Include="Command\MimosaLeavesBlock.cs" />
+    <Compile Include="Command\OakLeavesBlock.cs" />
+    <Compile Include="Command\SpruceLeavesBlock.cs" />
+    <Compile Include="Command\TallSpruceLeavesBlock.cs" />
+    <Compile Include="Game\CmdRodBlock.cs" />
+    <Compile Include="Game\ColumnArea.cs" />
+    <Compile Include="Game\CommandBlock.cs" />
+    <Compile Include="Game\CommandBlockPanel.cs" />
+    <Compile Include="Game\CommandBlockSelectionWidget.cs" />
+    <Compile Include="Game\CommandCamera.cs" />
+    <Compile Include="Game\CommandColorSelectionWidget.cs" />
+    <Compile Include="Game\CommandConfManager.cs" />
+    <Compile Include="Game\CommandData.cs" />
+    <Compile Include="Game\CommandEditHistoryWidget.cs" />
+    <Compile Include="Game\CommandEditNotesDialog.cs" />
+    <Compile Include="Game\CommandEditWidget.cs" />
+    <Compile Include="Game\CommandElectricElement.cs" />
+    <Compile Include="Game\CommandEntitySelectionWidget.cs" />
+    <Compile Include="Game\CommandListSelectionDialog.cs" />
+    <Compile Include="Game\CommandModLoader.cs" />
+    <Compile Include="Game\CommandMusic.cs" />
+    <Compile Include="Game\CommandScrollPanelWidget.cs" />
+    <Compile Include="Game\CommandSliderWidget.cs" />
+    <Compile Include="Game\CommandSwitchWidget.cs" />
+    <Compile Include="Game\ComponentPostprocessing.cs" />
+    <Compile Include="Game\ConeArea.cs" />
+    <Compile Include="Game\CoordDirection.cs" />
+    <Compile Include="Game\CoordinateMode.cs" />
+    <Compile Include="Game\CopyBlockManager.cs" />
+    <Compile Include="Game\CubeArea.cs" />
+    <Compile Include="Game\DataHandle.cs" />
+    <Compile Include="Game\EntityInfo.cs" />
+    <Compile Include="Game\EntityInfoManager.cs" />
+    <Compile Include="Game\ExpressionCalculator.cs" />
+    <Compile Include="Game\HistoryEditItem.cs" />
+    <Compile Include="Game\Instruction.cs" />
+    <Compile Include="Game\InstructionManager.cs" />
+    <Compile Include="Game\LightningStrikeParticleSystem.cs" />
+    <Compile Include="Game\ManualDetailsWidget.cs" />
+    <Compile Include="Game\ManualTopicWidget.cs" />
+    <Compile Include="Game\MovingBlockTag.cs" />
+    <Compile Include="Game\MovingCollision.cs" />
+    <Compile Include="Game\MovingEntityBlock.cs" />
+    <Compile Include="Game\NotesWidget.cs" />
+    <Compile Include="Game\Order.cs" />
+    <Compile Include="Game\Pattern.cs" />
+    <Compile Include="Game\PatternFont.cs" />
+    <Compile Include="Game\RecordManager.cs" />
+    <Compile Include="Game\RecordPlayerStats.cs" />
+    <Compile Include="Game\ScreenPattern.cs" />
+    <Compile Include="Game\SphereArea.cs" />
+    <Compile Include="Game\SubmitResult.cs" />
+    <Compile Include="Game\SubsystemCmdRodBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCommand.cs" />
+    <Compile Include="Game\SubsystemCommandBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCommandDef.cs" />
+    <Compile Include="Game\SubsystemCommandExt.cs" />
+    <Compile Include="Game\TStack.cs" />
+    <Compile Include="Game\WithdrawBlockManager.cs" />
+    <Compile Include="Game\WorkingMode.cs" />
+    <Compile Include="LibPixz2\App14ColorMode.cs" />
+    <Compile Include="LibPixz2\ArraySlice.cs" />
+    <Compile Include="LibPixz2\BitReader.cs" />
+    <Compile Include="LibPixz2\Color2.cs" />
+    <Compile Include="LibPixz2\Common.cs" />
+    <Compile Include="LibPixz2\ComponentInfo.cs" />
+    <Compile Include="LibPixz2\FileOps.cs" />
+    <Compile Include="LibPixz2\Huffman.cs" />
+    <Compile Include="LibPixz2\HuffmanTable.cs" />
+    <Compile Include="LibPixz2\IColorspaceConverter.cs" />
+    <Compile Include="LibPixz2\ImageDecoder.cs" />
+    <Compile Include="LibPixz2\ImgInfo.cs" />
+    <Compile Include="LibPixz2\ImgOps.cs" />
+    <Compile Include="LibPixz2\Info.cs" />
+    <Compile Include="LibPixz2\Markers.cs" />
+    <Compile Include="LibPixz2\Pixz.cs" />
+    <Compile Include="LibPixz2\QuantTable.cs" />
+    <Compile Include="LibPixz2\Rgb.cs" />
+    <Compile Include="LibPixz2\YCbCr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

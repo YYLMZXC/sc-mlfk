@@ -1,0 +1,123 @@
+延伸指令文档：
+
+#功能指令速览#
+blockdata=方块属性修改
+creaturedata=生物属性修改
+clothesdata=衣物属性修改
+
+#功能指令定义#
+blockdata type:default=请选择方块属性。退档重进该指令效果会丢失，需要重新提交
+blockdata type:behaviors id:46 opt:grave,match=方块行为=opt@null:无行为,throwable:可抛出,wood:木头,ivy:常春藤,rot:腐烂,bottomsucker:底部吸盘,waterplant:水生植物,fence:栅栏,impactexplosives:撞击爆炸,explosives:爆炸,carpet:地毯,campfile:篝火,furniture:家具,egg:蛋,hammer:锤子,bow:弓,crossbow:弩,musket:枪,arrow:箭,bomb:炸弹,fireworks:烟花,piston:活塞,grave:墓碑,soil:土壤,saddle:马鞍,match:火柴,bucket:桶,cactus:仙人掌,bullet:子弹,fertilizer:肥料
+blockdata type:food-type id:46 opt:bread=食物类型=opt@null:非食物,bread:面包,fish:鱼类,fruit:果类,grass:草类,meat:肉类
+blockdata type:icon-block-offset id:46 vec3:0,0,0=默认图标块偏移
+blockdata type:icon-view-offset id:46 vec3:0,0,0=默认图标视图偏移
+blockdata type:first-person-offset id:46 vec3:0,0,0=第一人称偏移
+blockdata type:first-person-rotation id:46 vec3:0,0,0=第一人称旋转
+blockdata type:in-hand-offset id:46 vec3:0,0,0=手持偏移
+blockdata type:in-hand-rotation id:46 vec3:0,0,0=手持旋转
+blockdata type:icon-view-scale id:46 v:0=默认图标视图缩放
+blockdata type:first-person-scale id:46 v:0=第一人称缩放
+blockdata type:in-hand-scale id:46 v:0=手持缩放
+blockdata type:shadow-strength id:46 v:0=默认阴影强度
+blockdata type:light-attenuation id:46 v:0=光衰减强度
+blockdata type:emitted-light-amount id:46 v:0=默认发光强度
+blockdata type:object-shadow-strength id:46 v:0=物体阴影强度
+blockdata type:drop-content id:46 v:0=默认掉落内容
+blockdata type:drop-count id:46 v:0=默认掉落数量
+blockdata type:experience-count id:46 v:0=默认掉落经验
+blockdata type:required-tool-level id:46 v:0=所需工具级别
+blockdata type:max-stacking id:46 v:0=最大堆积
+blockdata type:sleep-suitability id:46 v:0=适合睡眠
+blockdata type:friction-factor id:46 v:0=摩擦系数
+blockdata type:density id:46 v:0=密度
+blockdata type:durability id:46 v:0=耐久
+blockdata type:fuel-heat-level id:46 v:0=燃料加热水平
+blockdata type:fuel-fire-duration id:46 v:0=燃料持续时间
+blockdata type:shovel-power id:46 v:0=铲子效率
+blockdata type:quarry-power id:46 v:0=稿子效率
+blockdata type:hack-power id:46 v:0=斧子效率
+blockdata type:melee-power id:46 v:0=默认近战攻击力
+blockdata type:melee-hit-probability id:46 v:0=默认近战命中概率
+blockdata type:projectile-power id:46 v:0=默认射击攻击力
+blockdata type:tool-level id:46 v:0=工具等级
+blockdata type:player-level-required id:46 v:0=需要玩家等级
+blockdata type:projectile-speed id:46 v:0=投掷速度
+blockdata type:projectile-damping id:46 v:0=投掷阻力
+blockdata type:projectile-tip-offset id:46 v:0=投掷倾摆
+blockdata type:projectile-stick-probability id:46 v:0=投掷粘上概率
+blockdata type:heat id:46 v:0=默认热量
+blockdata type:fire-duration id:46 v:0=燃烧持续时间
+blockdata type:explosion-resilience id:46 v:0=爆炸抗性
+blockdata type:explosion-pressure id:46 v:0=默认爆炸压力
+blockdata type:dig-resilience id:46 v:0=挖掘抗性
+blockdata type:projectile-resilience id:46 v:0=投掷弹性
+blockdata type:sickness-probability id:46 v:0=默认患病概率
+blockdata type:rot-period id:46 v:0=默认旋转周期
+blockdata type:texture-slot id:46 v:0=默认纹理位置
+blockdata type:is-collidable id:46 con:true=是否可碰撞
+blockdata type:is-placeable id:46 con:true=是否可放置
+blockdata type:is-digging-transparent id:46 con:true=挖掘是否透明
+blockdata type:is-placement-transparent id:46 con:true=放置是否透明
+blockdata type:is-interactive id:46 con:true=是否可交互
+blockdata type:is-editable id:46 con:true=是否可编辑
+blockdata type:is-non-duplicable id:46 con:true=是否可堆叠
+blockdata type:is-gatherable id:46 con:true=是否可收集
+blockdata type:has-collision-behavior id:46 con:true=是否有碰撞行为
+blockdata type:kills-when-stuck id:46 con:true=卡住是否会死亡
+blockdata type:is-fluid-blocker id:46 con:true=是否为流体方块
+blockdata type:is-transparent id:46 con:true=是否透明
+blockdata type:is-aimable id:46 con:true=是否可瞄准
+blockdata type:is-stickable id:46 con:true=是否可粘贴
+blockdata type:align-to-velocity id:46 con:true=与速度对齐
+blockdata type:no-auto-jump id:46 con:true=禁止自动跳跃
+blockdata type:no-smooth-rise id:46 con:true=非平稳上升
+blockdata type:disintegrates-on-hit id:46 con:true=击中后消失
+blockdata type:explosion-incendiary id:46 con:true=默认爆炸燃烧弹
+blockdata type:is-explosion-transparent id:46 con:true=爆炸透明
+
+creaturedata type:default=请选择生物属性。退档重进该指令效果会丢失，需要重新提交
+creaturedata type:box-size obj:tiger vec3:0,0,0=修改碰撞箱
+creaturedata type:velocity obj:tiger vec3:0,0,0=修改移动位置
+creaturedata type:look-order obj:tiger vec2:0,0=转头控制
+creaturedata type:turn-order obj:tiger vec2:0,0=转身控制
+creaturedata type:air-drag obj:tiger vec2:0,0=修改空气阻力
+creaturedata type:water-drag obj:tiger vec2:0,0=修改水阻力
+creaturedata type:mass obj:tiger v:0=修改质量
+creaturedata type:density obj:tiger v:0=修改密度
+creaturedata type:air-capacity obj:tiger v:0=修改空气量
+creaturedata type:health obj:tiger v:0=修改生命值
+creaturedata type:attack-power obj:tiger v:0=修改攻击力
+creaturedata type:attack-resilience obj:tiger v:0=修改攻击抗性
+creaturedata type:fall-resilience obj:tiger v:0=修改摔倒抗性
+creaturedata type:corpse-duration obj:tiger v:0=修改尸体持续时间
+creaturedata type:stun-time obj:tiger v:0=修改眩晕时间
+creaturedata type:jump-order obj:tiger v:0=跳跃控制
+creaturedata type:jump-speed obj:tiger v:0=修改跳跃速度
+creaturedata type:swim-speed obj:tiger v:0=修改游泳速度
+creaturedata type:turn-speed obj:tiger v:0=修改转身速度
+creaturedata type:walk-speed obj:tiger v:0=修改行走速度
+creaturedata type:fly-speed obj:tiger v:0=修改飞行速度
+creaturedata type:is-invulnerable obj:tiger con:true=是否无懈可击
+creaturedata type:action-head obj:tiger v:0=动物模型头部动作
+creaturedata type:action-left-hand obj:tiger v:0=人模型左手或动物模型左前脚动作
+creaturedata type:action-right-hand obj:tiger v:0=人模型右手或动物模型右前脚动作
+creaturedata type:action-left-leg obj:tiger v:0=人模型左脚或动物模型左后脚动作
+creaturedata type:action-right-leg obj:tiger v:0=人模型右脚或动物模型右后脚动作
+
+clothesdata type:default=请选择衣物属性。退档重进该指令效果会丢失，需要重新提交
+clothesdata type:armor-protection cid:0 v:0=修改护甲值
+clothesdata type:sturdiness cid:0 v:0=修改耐久度
+clothesdata type:insulation cid:0 v:0=修改保暖度
+clothesdata type:movement-speed-factor cid:0 v:0=修改步行速度增幅程度
+clothesdata type:steed-movement-speed-factor cid:0 v:0=修改骑行速度增幅程度
+clothesdata type:density-modifier cid:0 v:0=修改最外层密度增幅程度
+clothesdata type:layer cid:0 v:0=修改层级
+clothesdata type:player-level-required cid:0 v:0=修改玩家等级需求
+clothesdata type:is-outer cid:0 con:true=是否最外层
+clothesdata type:can-be-dyed cid:0 con:true=是否可染色
+
+#条件指令速览#
+
+#条件指令定义#
+
+#结束#

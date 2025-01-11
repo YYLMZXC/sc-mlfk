@@ -1,0 +1,16 @@
+<StackPanelWidget xmlns="runtime-namespace:Game" Direction="Horizontal">
+
+	<CanvasWidget Size="30, 0"/>
+	
+	<CanvasWidget Size="40, 40">
+		<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255"/>
+		<ModelWidget Name="ModelIcon" Size="40, 40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+	</CanvasWidget>
+	
+	<CanvasWidget Size="10, 0"/>
+	
+	<CanvasWidget Size="200, 40">
+		<LabelWidget Name="ModelLabel" Text="" Font="{Fonts/Pericles}" HorizontalAlignment="Near" Margin="0, 5" Color="255, 255, 255" />
+	</CanvasWidget>
+	
+</StackPanelWidget>

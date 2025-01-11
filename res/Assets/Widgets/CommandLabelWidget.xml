@@ -1,0 +1,13 @@
+<CanvasWidget xmlns="runtime-namespace:Game" Name="ScreenLabelCanvas" Size="400, 200">
+
+	<RectangleWidget Name="ScreenLabelRectangle" FillColor="0, 0, 0, 255" OutlineColor="20, 20, 20, 128" OutlineThickness="1" />
+
+	<ScrollPanelWidget Name="ScrollPanel" Direction="Vertical" Margin="3, 3" ClampToBounds="true">
+		<CanvasWidget HorizontalAlignment="Center" VerticalAlignment="Center">
+			<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" Margin="10, 0" >
+				<LabelWidget Name="Content" Text=""  Color="255,255,255" HorizontalAlignment="Center" TextAnchor="HorizontalCenter" WordWrap="true" />
+			</StackPanelWidget>
+		</CanvasWidget>
+	</ScrollPanelWidget>
+
+</CanvasWidget>

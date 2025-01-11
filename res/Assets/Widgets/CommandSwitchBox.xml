@@ -1,0 +1,9 @@
+<StackPanelWidget xmlns="runtime-namespace:Game" Direction="Horizontal" HorizontalAlignment="Far" VerticalAlignment="Center">
+
+	<LabelWidget Name="CommandData.Label" Text="请输入值:" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+
+	<CanvasWidget Size="15, 0" />
+
+	<CommandSwitchWidget Name="CommandData.SwitchWidget"/>
+
+</StackPanelWidget>

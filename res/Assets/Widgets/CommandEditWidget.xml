@@ -1,0 +1,147 @@
+<CanvasWidget xmlns="runtime-namespace:Game">
+
+	<CanvasWidget CanvasWidget.Position="0, 10" Size="715, 465" ClampToBounds="true" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+		<RectangleWidget FillColor="128, 128, 128, 255" OutlineColor="192, 192, 192, 255" OutlineThickness="2" />
+
+		<CanvasWidget Name="BasicsWidget" CanvasWidget.Position="10, 10" Size="200, 330">
+
+			<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 255" OutlineThickness="2" />
+
+			<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+				<LabelWidget Name="CommandNameTitleLabel" Text="功能指令:" Font="{Fonts/Pericles}" VerticalAlignment="Center" Color="255, 255, 255, 255" />
+
+				<CanvasWidget Size="0, 10"/>
+
+				<BevelledButtonWidget Name="CommandNameButton" Size="160, 37">
+					<RectangleWidget FillColor="120, 120, 120, 255" OutlineColor="100, 100, 100, 255" IsVisible="true" />
+					<LabelWidget Name="CommandNameLabel" Text="" FontScale="1.11" HorizontalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="0, 25"/>
+
+				<LabelWidget Name="CommandTypeTitleLabel" Text="命令类型:" Font="{Fonts/Pericles}" VerticalAlignment="Center" Color="255, 255, 255, 255" />
+
+				<CanvasWidget Size="0, 10"/>
+
+				<BevelledButtonWidget Name="CommandTypeButton" Size="160, 37">
+					<RectangleWidget Name="CommandTypeRectangle" FillColor="120, 120, 120, 255" OutlineColor="100, 100, 100, 255" IsVisible="true" />
+					<LabelWidget Name="CommandTypeLabel" Text="" FontScale="1.11" HorizontalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="0, 25"/>
+
+				<LabelWidget Name="CoordinateTitleLabel" Text="坐标形式:" Font="{Fonts/Pericles}" VerticalAlignment="Center" Color="255, 255, 255, 255" />
+
+				<CanvasWidget Size="0, 10"/>
+
+				<BevelledButtonWidget Name="CoordinateButton" Size="160, 37">
+					<RectangleWidget Name="CoordinateRectangle" FillColor="120, 120, 120, 255" OutlineColor="100, 100, 100, 255" IsVisible="true" />
+					<LabelWidget Name="CoordinateLabel" Text="" FontScale="1.11" HorizontalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="0, 15"/>
+
+			</StackPanelWidget>
+
+		</CanvasWidget>
+
+		<CanvasWidget Name="AssignmentWidget" CanvasWidget.Position="215, 10" Size="490, 330">
+
+			<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 255" OutlineThickness="2" />
+			
+			<StackPanelWidget Name="CommandDataStaticWidget" Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<!-- 非滚动面板  -->
+			</StackPanelWidget>
+
+			<ScrollPanelWidget Name="CommandDataScrollPanelWidget" Direction="Vertical" Margin="3, 3" ClampToBounds="true">
+				<CanvasWidget HorizontalAlignment="Center" VerticalAlignment="Center">
+					<StackPanelWidget Name="CommandDataScrollWidget" Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" >
+						<!-- 滚动面板  -->
+					</StackPanelWidget>
+				</CanvasWidget>
+			</ScrollPanelWidget>
+
+		</CanvasWidget>
+
+		<CanvasWidget Name="InstructionTitleWidget" CanvasWidget.Position="10, 345" Size="695, 50">
+
+			<StackPanelWidget Direction="Horizontal">
+
+				<CanvasWidget Name="InstructionWidget" Size="625, 50">
+					<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 255" OutlineThickness="2" />
+					<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center">
+						<LabelWidget Name="InstructionLabel" Text="" Margin="0, 8" Font="{Fonts/Pericles}" Color="255, 255, 255, 255" />
+						<CommandScrollPanelWidget Name="InstructionScrollPanel" Direction="Horizontal" Margin="1,0" ClampToBounds="true">
+							<LabelWidget Name="InstructionScrollLabel" Text=""  Margin="8, 8" Font="{Fonts/Pericles}" Color="255, 255, 255, 255" />
+						</CommandScrollPanelWidget>
+					</StackPanelWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="5, 0"/>
+
+				<BevelledButtonWidget Name="CollectInstructionButton" Size="30, 50">
+					<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true" />
+					<LabelWidget Name="CollectLabel" Text="C" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="5, 0"/>
+
+				<BevelledButtonWidget Name="MoreInstructionButton" Size="30, 50">
+					<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true" />
+					<LabelWidget Name="MoreInstructionLabel" Text="..." Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+			</StackPanelWidget>
+
+		</CanvasWidget>
+
+		<CanvasWidget Name="WorkingTitleWidget" CanvasWidget.Position="10, 405" Size="695, 50">
+
+			<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Near">
+
+				<BevelledButtonWidget Name="WorkingModeButton" Size="100, 50">
+					<RectangleWidget Name="WorkingModeRectangle" FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+					<LabelWidget Name="WorkingModeLabel" Text="" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="10, 0"/>
+
+				<BevelledButtonWidget Name="QuickModeButton" Size="100, 50">
+					<RectangleWidget Name="QuickModeRectangle" FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+					<LabelWidget Name="QuickModeLabel" Text="" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+				</BevelledButtonWidget>
+
+			</StackPanelWidget>
+
+			<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Far">
+
+				<CanvasWidget Size="110, 50">
+					<BevelledButtonWidget Name="CancelButton" Size="100, 50" HorizontalAlignment="Far">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+						<LabelWidget Name="CancelLabel" Text="取消" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="110, 50">
+					<BevelledButtonWidget Name="SaveButton" Size="100, 50" HorizontalAlignment="Far">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+						<LabelWidget Name="SaveLabel" Text="确定" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Name="SubmitCanvas" Size="110, 50">
+					<BevelledButtonWidget Name="SubmitButton" Size="100, 50" HorizontalAlignment="Far">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+						<LabelWidget Name="SubmitLabel" Text="提交" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+			</StackPanelWidget>
+
+		</CanvasWidget>
+
+	</CanvasWidget>
+
+</CanvasWidget>

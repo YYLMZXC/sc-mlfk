@@ -1,0 +1,19 @@
+<CommandSwitchWidget xmlns="runtime-namespace:Game">
+
+	<StackPanelWidget Direction="Horizontal">
+
+		<BevelledButtonWidget Name="CommandData.FalseButton" Size="115, 40">
+			<RectangleWidget Name="CommandData.FalseRectangle" FillColor="80, 80, 80, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+			<LabelWidget Text="false:关" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+		</BevelledButtonWidget>
+
+		<CanvasWidget Size="15, 0" />
+
+		<BevelledButtonWidget Name="CommandData.TrueButton" Size="115, 40">
+			<RectangleWidget Name="CommandData.TrueRectangle" FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+			<LabelWidget Text="true:开" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+		</BevelledButtonWidget>
+
+	</StackPanelWidget>
+
+</CommandSwitchWidget>

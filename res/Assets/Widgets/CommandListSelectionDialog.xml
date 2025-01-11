@@ -1,0 +1,37 @@
+<CanvasWidget xmlns="runtime-namespace:Game">
+
+	<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+		<StackPanelWidget Name="SearchTextBox" Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+			<CanvasWidget Size="75, 40" VerticalAlignment="Center">
+				<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="100, 100, 100, 128" />
+				<LabelWidget Text="搜索:" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+			</CanvasWidget>
+
+			<CanvasWidget Size="430, 40" VerticalAlignment="Center" >
+				<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" />
+				<TextBoxWidget Name="ListSelectionDialog.TextBox" Size="400, 40" Font="{Fonts/Pericles}" VerticalAlignment="Center" MaximumLength="64" Margin="10, 0"/>
+			</CanvasWidget>
+
+			<CanvasWidget Size="15, 0" />
+
+			<BevelledButtonWidget Name="SelectionCancel" Size="75, 40">
+				<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+				<LabelWidget Text="取消" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+			</BevelledButtonWidget>
+
+		</StackPanelWidget>
+
+		<CanvasWidget Name="SearchInterval" Size="0, 20" />
+
+		<LabelWidget Name="ListSelectionDialog.Title" Color="255, 255, 255"  HorizontalAlignment="Center" DropShadow="true" Margin="0, 8"/>
+
+		<CanvasWidget Name="ListSelectionDialog.Content" Size="600, 400" ClampToBounds="true">
+			<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" OutlineThickness="2" />
+			<ListPanelWidget Name="ListSelectionDialog.List" Direction="Vertical" HorizontalAlignment="Center" Margin="3, 3" SelectionColor="60, 60, 60, 60"/>
+		</CanvasWidget>
+
+	</StackPanelWidget>
+
+</CanvasWidget>

@@ -1,0 +1,89 @@
+<CanvasWidget xmlns="runtime-namespace:Game" Margin="0,10">
+
+	<CanvasWidget Size="700, 400" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+		<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="120, 120, 120, 160" OutlineThickness="2" />
+
+		<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 5">
+
+			<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+				<CanvasWidget Size="200, 40">
+					<LabelWidget Name="Title" Text="命令方块笔记" Margin="10, 5"/>
+				</CanvasWidget>
+
+				<CanvasWidget Size="40, 40">
+					<BevelledButtonWidget Name="LButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget Name="Left" FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="L" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="10, 0" />
+
+				<CanvasWidget Size="40, 40">
+					<BevelledButtonWidget Name="RButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget Name="Right" FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="R" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="50, 0" />
+
+				<CanvasWidget Size="60, 40">
+					<BevelledButtonWidget Name="EditButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="编辑" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="10, 0" />
+
+				<CanvasWidget Size="60, 40">
+					<BevelledButtonWidget Name="RemoveButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="删除" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="10, 0" />
+
+				<CanvasWidget Size="60, 40">
+					<BevelledButtonWidget Name="AddButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="添加" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+				<CanvasWidget Size="10, 0" />
+
+				<CanvasWidget Size="60, 40">
+					<BevelledButtonWidget Name="OkButton" Size="80, 40" VerticalAlignment="Center" HorizontalAlignment="Far" Margin="0, 3">
+						<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" IsVisible="true"/>
+						<LabelWidget Text="关闭" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+					</BevelledButtonWidget>
+				</CanvasWidget>
+
+			</StackPanelWidget>
+
+			<CanvasWidget Size="680, 320" Margin="20, 3">
+
+				<RectangleWidget FillColor="0, 0, 0, 255" OutlineColor="20, 20, 20, 128" OutlineThickness="1" />
+
+				<ScrollPanelWidget Name="ScrollPanel" Direction="Vertical" Margin="3, 3" ClampToBounds="true">
+					<CanvasWidget HorizontalAlignment="Center" VerticalAlignment="Center">
+						<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" Margin="10, 0" >
+							<LabelWidget Name="Content" Text=""  Color="255,255,255" HorizontalAlignment="Center" TextAnchor="HorizontalCenter" WordWrap="true" />
+						</StackPanelWidget>
+					</CanvasWidget>
+				</ScrollPanelWidget>
+
+			</CanvasWidget>
+
+			<CanvasWidget Size="0, 10"/>
+
+		</StackPanelWidget>
+
+	</CanvasWidget>
+
+</CanvasWidget>

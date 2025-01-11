@@ -1,0 +1,14 @@
+<StackPanelWidget xmlns="runtime-namespace:Game" Direction="Horizontal" Margin="0, 0">
+
+	<CanvasWidget Size="10, 40" VerticalAlignment="Center" Margin="2, 4">
+		<RectangleWidget Name="PassRectangle" FillColor="32, 255, 32, 160" OutlineColor="100, 100, 100, 128" />
+	</CanvasWidget>
+
+	<CanvasWidget Size="540, 50" Margin="0, -5">
+		<StackPanelWidget Direction="Vertical" VerticalAlignment="Center">
+			<LabelWidget Name="HistoryEditItem.About" Text=""  Color="255, 255, 255" VerticalAlignment="Center" WordWrap="false" Ellipsis="true" Margin="5, 0"/>
+			<LabelWidget Name="HistoryEditItem.Line" Text="" FontScale="0.8"  Color="192, 192, 192" VerticalAlignment="Center" WordWrap="false" Ellipsis="true" Margin="5, 0"/>
+		</StackPanelWidget>
+	</CanvasWidget>
+
+</StackPanelWidget>

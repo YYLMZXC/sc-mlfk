@@ -1,0 +1,11 @@
+{
+  "Name": "命令方块",
+  "Version": "2.1.0",
+  "ApiVersion": "1.44",
+  "Description": "通过指令实现各种各样的功能",
+  "ScVersion": "2.3.0.0",
+  "Link": "https://m.schub.top/com/mods/preview/341",
+  "Author": "陽叁疯、再回首zh",
+  "PackageName": "zh.command",
+  "Dependencies": []
+}

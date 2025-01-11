@@ -1,0 +1,3 @@
+<StackPanelWidget xmlns="runtime-namespace:Game" Direction="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+	<LabelWidget Name="InformationTopic.Title" Text=""  Color="255, 255, 255" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+</StackPanelWidget>

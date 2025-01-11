@@ -1,0 +1,60 @@
+<CanvasWidget xmlns="runtime-namespace:Game" Size="600, 450" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+	<StackPanelWidget Direction="Horizontal">
+
+		<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center">
+
+			<CanvasWidget Size="0, 10" />
+
+			<StackPanelWidget Direction="Vertical" Margin="20, 0">
+
+				<CanvasWidget Size="600, 60">
+
+					<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+
+					<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+						<CanvasWidget Size="230, 40" VerticalAlignment="Center">
+							<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 128" />
+							<LabelWidget Text="指令编辑历史记录" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+						</CanvasWidget>
+
+						<CanvasWidget Size="60, 0"/>
+
+						<BevelledButtonWidget Name="ClearButton" Size="80, 40">
+							<RectangleWidget Name="RemoveRectangle" FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+							<LabelWidget Name="RemoveLabel" Text="移除" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+						</BevelledButtonWidget>
+
+						<CanvasWidget Size="10, 0"/>
+
+						<BevelledButtonWidget Name="FilterButton" Size="80, 40">
+							<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+							<LabelWidget Name="FilterLabel" Text="收藏" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+						</BevelledButtonWidget>
+
+						<CanvasWidget Size="10, 0"/>
+
+						<BevelledButtonWidget Name="OkButton" Size="80, 40">
+							<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+							<LabelWidget Text="返回" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+						</BevelledButtonWidget>
+
+					</StackPanelWidget>
+
+				</CanvasWidget>
+
+				<CanvasWidget>
+					<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="128, 128, 128, 128" />
+					<ListPanelWidget Name="EditHistory.List" Direction="Vertical" Margin="0, 3" ItemSize="50" SelectionColor="60, 60, 60, 60"/>
+				</CanvasWidget>
+
+			</StackPanelWidget>
+
+			<CanvasWidget Size="0, 10" />
+
+		</StackPanelWidget>
+
+	</StackPanelWidget>
+
+</CanvasWidget>

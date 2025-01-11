@@ -1,0 +1,81 @@
+<CanvasWidget xmlns="runtime-namespace:Game" Size="420, 240" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+	<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="140, 140, 140, 255"/>
+
+	<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center">
+
+		<CanvasWidget Size="420, 60">
+
+			<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="140, 140, 140, 255"/>
+
+			<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+				<CanvasWidget Size="200, 40" VerticalAlignment="Center">
+					<RectangleWidget FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 128" />
+					<LabelWidget Text="颜色选择界面" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+				</CanvasWidget>
+
+				<CanvasWidget Size="30, 0"/>
+
+				<BevelledButtonWidget Name="SelectionOk" Size="80, 40">
+					<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+					<LabelWidget Text="确定" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+				</BevelledButtonWidget>
+
+				<CanvasWidget Size="10, 0"/>
+
+				<BevelledButtonWidget Name="SelectionCancel" Size="80, 40">
+					<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+					<LabelWidget Text="取消" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+				</BevelledButtonWidget>
+
+			</StackPanelWidget>
+
+		</CanvasWidget>
+
+		<CanvasWidget Size="0,10"/>
+
+		<StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+			<CanvasWidget Size="20, 0" />
+
+			<CanvasWidget Size="250, 160">
+
+				<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+					<CanvasWidget Size="250, 40">
+						<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" />
+						<CommandSliderWidget Name="ColorSlider.R" Size="250, 40" Granularity="1" LabelWidth="0" VerticalAlignment="Center"/>
+					</CanvasWidget>
+
+					<CanvasWidget Size="0, 20"/>
+
+					<CanvasWidget Size="250, 40">
+						<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" />
+						<CommandSliderWidget Name="ColorSlider.G" Size="250, 40" Granularity="1" LabelWidth="0" VerticalAlignment="Center"/>
+					</CanvasWidget>
+
+					<CanvasWidget Size="0, 20"/>
+
+					<CanvasWidget Size="250, 40">
+						<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" />
+						<CommandSliderWidget Name="ColorSlider.B" Size="250, 40" Granularity="1" LabelWidth="0" VerticalAlignment="Center"/>
+					</CanvasWidget>
+
+				</StackPanelWidget>
+
+			</CanvasWidget>
+
+			<CanvasWidget Size="20, 0" />
+
+			<CanvasWidget Size="100, 160">
+				<RectangleWidget Name="ColorDisplay" FillColor="80, 80, 80, 255" OutlineColor="100, 100, 100, 128"/>
+			</CanvasWidget>
+
+			<CanvasWidget Size="10, 0" />
+
+		</StackPanelWidget>
+
+	</StackPanelWidget>
+
+</CanvasWidget>

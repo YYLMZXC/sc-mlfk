@@ -1,0 +1,27 @@
+<CanvasWidget xmlns="runtime-namespace:Game" Margin="0,10">
+
+	<CanvasWidget Size="300, 400" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+		<RectangleWidget FillColor="128, 128, 128, 255" OutlineColor="192, 192, 192, 255" OutlineThickness="2" />
+
+		<StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+			<LabelWidget Font="{Fonts/Pericles}" Text="命令方块手册" HorizontalAlignment="Center" Margin="0,5"/>
+
+			<CanvasWidget Size="280, 280" HorizontalAlignment="Center" Margin="0,10">
+				<RectangleWidget FillColor="100, 100, 100, 255" OutlineColor="120, 120, 120, 255" OutlineThickness="1" />
+				<StackPanelWidget Direction="Vertical">
+					<ListPanelWidget Name="Information.List" Direction="Vertical" HorizontalAlignment="Center" Margin="3, 3" SelectionColor="160, 160, 160, 255"/>
+				</StackPanelWidget>
+			</CanvasWidget>
+
+			<BevelledButtonWidget Name="OkButton" Size="100, 40" HorizontalAlignment="Center">
+				<RectangleWidget FillColor="110, 110, 110, 255" OutlineColor="140, 140, 140, 255" IsVisible="true"/>
+				<LabelWidget Text="关闭" Font="{Fonts/Pericles}" HorizontalAlignment="Center" VerticalAlignment="Center" Color="255, 255, 255, 255" IsVisible="true"/>
+			</BevelledButtonWidget>
+
+		</StackPanelWidget>
+
+	</CanvasWidget>
+
+</CanvasWidget>

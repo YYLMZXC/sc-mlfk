@@ -1,0 +1,12 @@
+<StackPanelWidget xmlns="runtime-namespace:Game" Direction="Horizontal" HorizontalAlignment="Far" VerticalAlignment="Center">
+
+	<LabelWidget Name="CommandData.Label" Text="请输入值:" Font="{Fonts/Pericles}" HorizontalAlignment="Center" Margin="0, 5" Color="255, 255, 255" />
+
+	<CanvasWidget Size="15, 0" />
+
+	<CanvasWidget Size="245, 40" >
+		<RectangleWidget FillColor="64, 64, 64, 255" OutlineColor="100, 100, 100, 128" />
+		<CommandSliderWidget Name="CommandData.Slider" Size="245, 40" Granularity="1" LabelWidth="80" VerticalAlignment="Center"/>
+	</CanvasWidget>
+
+</StackPanelWidget>

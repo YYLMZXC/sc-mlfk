@@ -1,0 +1,45 @@
+<CommandMod>
+	<ProjectTemplate Name="Project" Guid="85023bf8-1c90-4dd1-9442-e6c13691d078">
+		<MemberSubsystemTemplate Name="CommandBlockBehavior" Guid="33333333-aaaa-0000-0000-000000000000" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745">
+			<Parameter Name="Class" Guid="33333333-aaaa-0000-0000-000000000001" Value="Game.SubsystemCommandBlockBehavior" Type="string" />
+			<ParameterSet Name="Commands" Description="用于储存命令方块中的指令" Guid="bdafca01-0000-414d-854e-aaaa8a138d0e" />
+		</MemberSubsystemTemplate>
+		<MemberSubsystemTemplate Name="CmdRodBlockBehavior" Guid="33333333-aaaa-0000-0000-000000000002" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745">
+			<Parameter Name="Class" Guid="33333333-aaaa-0000-0000-000000000003" Value="Game.SubsystemCmdRodBlockBehavior" Type="string" />
+			<Parameter Name="CommandLine" Value="" Type="string" />
+		</MemberSubsystemTemplate>
+		<MemberSubsystemTemplate Name="Command" Guid="33333333-aaaa-0000-0000-000000000004" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745">
+			<Parameter Name="Class" Guid="33333333-aaaa-0000-0000-000000000005" Value="Game.SubsystemCommand" Type="string" />
+			<Parameter Name="MessageTips" Value="true" Type="bool" />
+			<Parameter Name="ChartletDraw" Value="true" Type="bool" />
+			<Parameter Name="InteractEnable" Value="true" Type="bool" />
+		</MemberSubsystemTemplate>
+		<MemberSubsystemTemplate Name="CommandDef" Guid="33333333-aaaa-0000-0000-000000000006" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745">
+			<Parameter Name="Class" Guid="33333333-aaaa-0000-0000-000000000007" Value="Game.SubsystemCommandDef" Type="string" />
+			<Parameter Name="Shapeshifter" Value="false" Type="bool" />
+			<Parameter Name="PlayerBoxStage" Value="default" Type="string" />
+			<Parameter Name="CommandMusic" Value="" Type="string" />
+			<Parameter Name="FirmBlocks" Value="" Type="string" />
+			<Parameter Name="RainColor" Value="255,255,255" Type="Color" />
+			<Parameter Name="SkyColor" Value="255,255,255" Type="Color" />
+			<Parameter Name="WorkChunksLine" Value="" Type="string" />
+			<Parameter Name="CreatureTextures" Value="" Type="string" />
+			<Parameter Name="CreatureModels" Value="" Type="string" />
+			<ParameterSet Name="PatternPoints" Guid="33333333-aaaa-bbbb-0000-000000000001" />
+			<ParameterSet Name="PatternFonts" Guid="33333333-aaaa-bbbb-0000-000000000002" />
+			<ParameterSet Name="WaitingMoveSets" Guid="33333333-aaaa-bbbb-0000-000000000003" />
+			<ParameterSet Name="MovingEntityBlocks" Guid="33333333-aaaa-bbbb-0000-000000000004" />
+		</MemberSubsystemTemplate>
+		<MemberSubsystemTemplate Name="CommandExt" Guid="33333333-aaaa-3333-0000-000000000007" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745">
+			<Parameter Name="Class" Guid="33333333-aaaa-3333-0000-000000000008" Value="Game.SubsystemCommandExt" Type="string" />
+		</MemberSubsystemTemplate>
+	</ProjectTemplate>
+	<EntityTemplate Name="Player" Guid="4be6c1c5-d65d-4537-8a8b-a391969e6dc2">
+		<MemberComponentTemplate Name="ComponentPostprocessing" Guid="33333333-aaaa-0000-0000-000000000009" InheritanceParent="33333333-aaaa-0000-0000-000000000010" />
+	</EntityTemplate>
+	<Folder Name="Gameplay" Guid="d3d4b692-acc9-4128-9b99-a5acf1de1fbb">
+		<ComponentTemplate Name="ComponentPostprocessing" Description="" Guid="33333333-aaaa-0000-0000-000000000010" InheritanceParent="b05700ed-7e4e-4679-98f5-b597f421496b">
+			<Parameter Name="Class" Guid="33333333-aaaa-0000-0000-000000000011" Value="Game.ComponentPostprocessing" Type="string" />
+		</ComponentTemplate>
+	</Folder>
+</CommandMod>
