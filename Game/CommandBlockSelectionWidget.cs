@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Engine;
 using GameEntitySystem;
+using Game;
 
-namespace Game
+namespace Mlfk
 {
     public class CommandBlockSelectionWidget : CanvasWidget
     {

@@ -1,7 +1,9 @@
 using Engine;
 using Engine.Graphics;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandBlock : CubeBlock, IElectricElementBlock, IPaintableBlock
     {
@@ -30,13 +32,16 @@ namespace Game
 
         public override int GetFaceTextureSlot(int face, int value)
         {
-            return face switch
+            switch (face)
             {
-                4 => 1,
-                5 => 1,
-                _ => 0,
-            };
+                case 4:
+                case 5:
+                    return 1;
+                default:
+                    return 0;
+            }
         }
+
 
         public override int GetTextureSlotCount(int value)
         {

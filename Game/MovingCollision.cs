@@ -1,13 +1,10 @@
-using Engine;
-
-namespace Game
+using Game;
+namespace Mlfk
 {
-    public class MovingBlockTag
+    public class MovingCollision
     {
-        public string Name;
+        public int Block = 0;
 
-        public CoordDirection Face;
-
-        public Point3 Axis;
+        public string Creature = string.Empty;
     }
 }

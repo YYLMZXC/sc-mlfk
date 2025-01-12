@@ -1,4 +1,6 @@
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public enum WorkingMode
     {

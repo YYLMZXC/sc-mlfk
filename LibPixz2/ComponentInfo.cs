@@ -1,4 +1,6 @@
-namespace LibPixz2
+using Game;
+
+namespace Mlfk
 {
     public struct ComponentInfo
     {

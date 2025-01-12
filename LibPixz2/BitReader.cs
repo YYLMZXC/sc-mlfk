@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 
-namespace LibPixz2
+using Game;
+
+namespace Mlfk
 {
     public class BitReader
     {

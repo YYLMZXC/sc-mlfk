@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Xml.Linq;
 using Engine;
+using Game;
 
-namespace Game
+namespace Mlfk
 {
     public class CommandListSelectionDialog : Dialog
     {

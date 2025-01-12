@@ -1,7 +1,10 @@
 using Engine;
 using Engine.Graphics;
 
-namespace Game
+using Game;
+using Random = Game.Random;
+
+namespace Mlfk
 {
     public class LightningStrikeParticleSystem : ParticleSystem<LightningStrikeParticleSystem.Particle>
     {

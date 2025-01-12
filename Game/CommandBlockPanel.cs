@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using Engine;
+using Game;
 
-namespace Game
+namespace Mlfk
 {
     public class CommandBlockPanel : CanvasWidget
     {

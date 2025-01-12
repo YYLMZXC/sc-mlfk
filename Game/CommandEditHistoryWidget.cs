@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Engine;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandEditHistoryWidget : CanvasWidget
     {

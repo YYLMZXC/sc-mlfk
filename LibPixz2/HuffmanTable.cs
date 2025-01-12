@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Game;
 
-namespace LibPixz2
+namespace Mlfk
 {
     public struct HuffmanTable
     {

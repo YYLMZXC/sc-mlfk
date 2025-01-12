@@ -5,7 +5,9 @@ using Engine.Graphics;
 using GameEntitySystem;
 using TemplatesDatabase;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class EntityInfoManager
     {
@@ -179,16 +181,23 @@ namespace Game
 
         public static string GetModelTypeDisplayName(string modelName)
         {
-            return modelName switch
+            switch (modelName)
             {
-                "HumanModel" => "人模型",
-                "FourLeggedModel" => "四脚动物模型",
-                "BirdModel" => "鸟模型",
-                "FlightlessBirdModel" => "不飞鸟模型",
-                "FishModel" => "鱼模型",
-                _ => "其他模型",
-            };
+                case "HumanModel":
+                    return "人模型";
+                case "FourLeggedModel":
+                    return "四脚动物模型";
+                case "BirdModel":
+                    return "鸟模型";
+                case "FlightlessBirdModel":
+                    return "不飞鸟模型";
+                case "FishModel":
+                    return "鱼模型";
+                default:
+                    return "其他模型";
+            }
         }
+
 
         public static string GetEntityName(string obj)
         {

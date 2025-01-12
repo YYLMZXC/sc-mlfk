@@ -2,7 +2,9 @@ using System.Xml.Linq;
 using Engine;
 using Engine.Media;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandSliderWidget : CanvasWidget
     {

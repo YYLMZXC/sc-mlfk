@@ -1,7 +1,9 @@
 using System.Xml.Linq;
 using Engine;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandSwitchWidget : CanvasWidget
     {

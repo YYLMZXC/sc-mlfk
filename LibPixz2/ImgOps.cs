@@ -1,6 +1,8 @@
 using System;
 
-namespace LibPixz2
+using Game;
+
+namespace Mlfk
 {
     public class ImgOps
     {

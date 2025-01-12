@@ -1,7 +1,9 @@
 using System;
 using System.Xml.Linq;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandEditNotesDialog : Dialog
     {

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Engine;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class DataHandle
     {
@@ -261,17 +263,25 @@ namespace Game
                 return n.ToString();
             }
 
-            return n switch
+            switch (n)
             {
-                10 => "a",
-                11 => "b",
-                12 => "c",
-                13 => "d",
-                14 => "e",
-                15 => "f",
-                _ => "0",
-            };
+                case 10:
+                    return "a";
+                case 11:
+                    return "b";
+                case 12:
+                    return "c";
+                case 13:
+                    return "d";
+                case 14:
+                    return "e";
+                case 15:
+                    return "f";
+                default:
+                    return "0";
+            }
         }
+
 
         public static bool GetBoolValue(string str)
         {

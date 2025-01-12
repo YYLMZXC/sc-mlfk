@@ -5,7 +5,9 @@ using System.Xml.Linq;
 using Engine;
 using GameEntitySystem;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CommandEditWidget : CanvasWidget
     {

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using Engine;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class CopyBlockManager
     {

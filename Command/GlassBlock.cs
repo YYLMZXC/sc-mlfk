@@ -3,7 +3,7 @@ using Engine;
 using Engine.Graphics;
 using Game;
 
-namespace Command
+namespace Mlfk
 {
     public class GlassBlock : Game.GlassBlock
     {

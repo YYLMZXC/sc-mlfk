@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Random = System.Random;
+using Game;
 
-namespace LibPixz2
+namespace Mlfk
 {
     public class Huffman
     {

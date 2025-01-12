@@ -2,7 +2,9 @@ using System.IO;
 using Engine;
 using Engine.Media;
 
-namespace LibPixz2
+using Game;
+
+namespace Mlfk
 {
     public class ImageDecoder
     {

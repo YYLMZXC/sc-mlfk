@@ -7,8 +7,8 @@
     <ProjectGuid>{457FCB1C-E12D-4D50-94CF-3E10DF83C6D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mlfk</RootNamespace>
-    <AssemblyName>mlfk</AssemblyName>
+    <RootNamespace>Mlfk</RootNamespace>
+    <AssemblyName>Mlfk</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="#命令方块联机适用">
-      <HintPath>..\联机版-命令方块阉割版\#命令方块联机适用.dll</HintPath>
-    </Reference>
     <Reference Include="Engine">
       <HintPath>dll\Engine.dll</HintPath>
     </Reference>

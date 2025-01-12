@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Command;
+
 using Engine;
 using Engine.Audio;
 using Engine.Graphics;
@@ -14,8 +14,9 @@ using Engine.Media;
 using GameEntitySystem;
 using TemplatesDatabase;
 using XmlUtilities;
-
-namespace Game
+using Game;
+using Random = Game.Random;
+namespace Mlfk
 {
     public class SubsystemCommandDef : SubsystemCommand, IUpdateable, IDrawable
     {
@@ -874,8 +875,8 @@ namespace Game
                         int limitValue2 = GetLimitValue(cube3.Current.X, cube3.Current.Y, cube3.Current.Z);
                         if (Terrain.ExtractContents(limitValue2) == 72)
                         {
-                            Color commandColor = Command.ClayBlock.GetCommandColor(Terrain.ExtractData(limitValue2));
-                            if (!Command.ClayBlock.IsDefaultColor(commandColor))
+                            Color commandColor = Mlfk.ClayBlock.GetCommandColor(Terrain.ExtractData(limitValue2));
+                            if (!Mlfk.ClayBlock.IsDefaultColor(commandColor))
                             {
                                 int value34 = DataHandle.GetColorIndex(commandColor) * 32768 + 16456;
                                 ChangeBlockValue(wbManager4, cube3.Current.X, cube3.Current.Y, cube3.Current.Z, value34);
@@ -2389,12 +2390,12 @@ namespace Game
                 m_rainColor = rainColor;
                 if (flag36)
                 {
-                    subsystemWeather.GlobalPrecipitationIntensity = 1f;
+                    subsystemWeather.PrecipitationIntensity = 1f;
                     subsystemWeather.m_precipitationStartTime = 0.0;
                 }
                 else
                 {
-                    subsystemWeather.GlobalPrecipitationIntensity = 0f;
+                    subsystemWeather.PrecipitationIntensity = 0f;
                     subsystemWeather.m_precipitationEndTime = 0.0;
                 }
 
@@ -2937,13 +2938,23 @@ namespace Game
                         });
                         Vector3 vector12 = new Vector3(cubeArea5.MinPoint);
                         Vector3 vector13 = ((SubsystemMovingBlocks.MovingBlockSet)movingBlockSet4).TargetPosition - ((SubsystemMovingBlocks.MovingBlockSet)movingBlockSet4).Position;
-                        vector13 = text48 switch
+
+                        switch (text48)
                         {
-                            "back" => new Vector3(0f - vector13.X, vector13.Y, 0f - vector13.Z),
-                            "left" => new Vector3(vector13.Z, vector13.Y, 0f - vector13.X),
-                            "right" => new Vector3(0f - vector13.Z, vector13.Y, vector13.X),
-                            _ => Vector3.Zero,
-                        };
+                            case "back":
+                                vector13 = new Vector3(0f - vector13.X, vector13.Y, 0f - vector13.Z);
+                                break;
+                            case "left":
+                                vector13 = new Vector3(vector13.Z, vector13.Y, 0f - vector13.X);
+                                break;
+                            case "right":
+                                vector13 = new Vector3(0f - vector13.Z, vector13.Y, vector13.X);
+                                break;
+                            default:
+                                vector13 = Vector3.Zero;
+                                break;
+                        }
+
                         movingBlockSet4 = m_subsystemMovingBlocks.AddMovingBlockSet(vector12, vector12 + vector13, ((SubsystemMovingBlocks.MovingBlockSet)movingBlockSet4).Speed, 0f, 0f, new Vector2(1f, 1f), list8, "moveset", tag, testCollision: true);
                         if (movingBlockSet4 != null)
                         {
@@ -4658,7 +4669,7 @@ namespace Game
                             {
                                 if (flag9)
                                 {
-                                    value6 = Command.ClayBlock.SetCommandColor(72, pixel);
+                                    value6 = Mlfk.ClayBlock.SetCommandColor(72, pixel);
                                 }
                                 else if (!ColorIndexCaches.TryGetValue(pixel, out value6))
                                 {
@@ -5261,7 +5272,7 @@ namespace Game
                                             zero.Z = point4.Z;
                                         }
 
-                                        num9 = ((array.Length != 4) ? Command.ClayBlock.SetCommandColor(72, new Color(int.Parse(array[3]), int.Parse(array[4]), int.Parse(array[5]))) : int.Parse(array[3]));
+                                        num9 = ((array.Length != 4) ? Mlfk.ClayBlock.SetCommandColor(72, new Color(int.Parse(array[3]), int.Parse(array[4]), int.Parse(array[5]))) : int.Parse(array[3]));
                                         ChangeBlockValue(wbManager, point4.X, point4.Y, point4.Z, num9);
                                     }
                                     catch
@@ -5431,31 +5442,31 @@ namespace Game
                     switch (value)
                     {
                         case 72:
-                            num2 = Command.ClayBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.ClayBlock.SetCommandColor(value, color);
                             break;
                         case 12:
-                            num2 = Command.OakLeavesBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.OakLeavesBlock.SetCommandColor(value, color);
                             break;
                         case 13:
-                            num2 = Command.BirchLeavesBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.BirchLeavesBlock.SetCommandColor(value, color);
                             break;
                         case 14:
-                            num2 = Command.SpruceLeavesBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.SpruceLeavesBlock.SetCommandColor(value, color);
                             break;
                         case 225:
-                            num2 = Command.TallSpruceLeavesBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.TallSpruceLeavesBlock.SetCommandColor(value, color);
                             break;
                         case 256:
-                            num2 = Command.MimosaLeavesBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.MimosaLeavesBlock.SetCommandColor(value, color);
                             break;
                         case 15:
-                            num2 = Command.GlassBlock.SetCommandColor(value, color);
+                            num2 = Mlfk.GlassBlock.SetCommandColor(value, color);
                             break;
                     }
 
                     if (value == 15)
                     {
-                        num2 = Command.GlassBlock.SetCommandColorAlpha(num2, (int)((float)(int)color.A / 16f));
+                        num2 = Mlfk.GlassBlock.SetCommandColorAlpha(num2, (int)((float)(int)color.A / 16f));
                     }
 
                     if (flag2)
@@ -5476,49 +5487,49 @@ namespace Game
                     DisplayColorBlock = displayColorBlock;
                     if (DisplayColorBlock)
                     {
-                        BlocksManager.AddCategory(Command.ClayBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.BirchLeavesBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.OakLeavesBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.SpruceLeavesBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.TallSpruceLeavesBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.MimosaLeavesBlock.CommandCategory);
-                        BlocksManager.AddCategory(Command.GlassBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.ClayBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.BirchLeavesBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.OakLeavesBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.SpruceLeavesBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.TallSpruceLeavesBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.MimosaLeavesBlock.CommandCategory);
+                        BlocksManager.AddCategory(Mlfk.GlassBlock.CommandCategory);
                     }
                     else
                     {
-                        if (BlocksManager.m_categories.Contains(Command.ClayBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.ClayBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.ClayBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.ClayBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.BirchLeavesBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.BirchLeavesBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.BirchLeavesBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.BirchLeavesBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.OakLeavesBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.OakLeavesBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.OakLeavesBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.OakLeavesBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.SpruceLeavesBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.SpruceLeavesBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.SpruceLeavesBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.SpruceLeavesBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.TallSpruceLeavesBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.TallSpruceLeavesBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.TallSpruceLeavesBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.TallSpruceLeavesBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.MimosaLeavesBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.MimosaLeavesBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.MimosaLeavesBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.MimosaLeavesBlock.CommandCategory);
                         }
 
-                        if (BlocksManager.m_categories.Contains(Command.GlassBlock.CommandCategory))
+                        if (BlocksManager.m_categories.Contains(Mlfk.GlassBlock.CommandCategory))
                         {
-                            BlocksManager.m_categories.Remove(Command.GlassBlock.CommandCategory);
+                            BlocksManager.m_categories.Remove(Mlfk.GlassBlock.CommandCategory);
                         }
                     }
 
@@ -7952,8 +7963,11 @@ namespace Game
                     return;
                 }
 
-                using Stream stream2 = Storage.OpenFile(path, OpenFileMode.Create);
-                XmlUtils.SaveXmlToStream(xElement, stream2, null, throwOnError: true);
+                using (Stream stream2 = Storage.OpenFile(path, OpenFileMode.Create))
+                {
+                    XmlUtils.SaveXmlToStream(xElement, stream2, null, throwOnError: true);
+                }
+
             }
             catch (Exception ex)
             {

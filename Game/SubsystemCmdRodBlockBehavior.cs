@@ -4,7 +4,9 @@ using Engine;
 using Engine.Graphics;
 using TemplatesDatabase;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class SubsystemCmdRodBlockBehavior : SubsystemBlockBehavior, IDrawable, IUpdateable
     {
@@ -384,10 +386,10 @@ namespace Game
             {
                 InitPointDataWidget();
             }
-
             if (m_subsystemCommand.m_componentPlayer != null)
             {
-                m_subsystemCommand.m_componentPlayer.ComponentBody.TerrainCollidable = !QuickMode;
+                // 此处不再需要设置 TerrainCollidable
+                // 如果是想要判断方块是否可碰撞，使用 block.IsCollidable
             }
 
             if (m_pointDataWidget == null || m_subsystemCommand.m_componentPlayer == null)

@@ -4,7 +4,9 @@ using Engine;
 using GameEntitySystem;
 using TemplatesDatabase;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class SubsystemCommand : Subsystem
     {

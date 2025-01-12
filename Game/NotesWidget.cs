@@ -3,7 +3,9 @@ using System.Linq;
 using System.Xml.Linq;
 using Engine;
 
-namespace Game
+using Game;
+
+namespace Mlfk
 {
     public class NotesWidget : CanvasWidget
     {

@@ -1,6 +1,7 @@
 using Engine;
+using Game;
 
-namespace Game
+namespace Mlfk
 {
     public class CommandScrollPanelWidget : ScrollPanelWidget
     {

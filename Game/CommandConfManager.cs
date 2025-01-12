@@ -4,8 +4,9 @@ using System.Text;
 using System.Xml.Linq;
 using Engine;
 using XmlUtilities;
+using Game;
 
-namespace Game
+namespace Mlfk
 {
     public class CommandConfManager
     {
