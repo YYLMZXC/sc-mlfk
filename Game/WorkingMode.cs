@@ -1,9 +1,9 @@
 namespace Game
 {
-	public enum WorkingMode
-	{
-		Default,
-		Condition,
-		Variable
-	}
+    public enum WorkingMode
+    {
+        Default,
+        Condition,
+        Variable
+    }
 }

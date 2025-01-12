@@ -2,18 +2,18 @@ using Engine;
 
 namespace Game
 {
-	public class HistoryEditItem
-	{
-		public string About;
+    public class HistoryEditItem
+    {
+        public string About;
 
-		public string Line;
+        public string Line;
 
-		public Point3 Position;
+        public Point3 Position;
 
-		public bool Pass;
+        public bool Pass;
 
-		public bool Condition;
+        public bool Condition;
 
-		public bool Collection;
-	}
+        public bool Collection;
+    }
 }

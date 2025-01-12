@@ -1,9 +1,13 @@
+using Engine;
+
 namespace Game
 {
-	public class MovingCollision
-	{
-		public int Block = 0;
+    public class MovingBlockTag
+    {
+        public string Name;
 
-		public string Creature = string.Empty;
-	}
+        public CoordDirection Face;
+
+        public Point3 Axis;
+    }
 }

@@ -1,11 +1,11 @@
 namespace LibPixz2
 {
-	public struct Info
-	{
-		public float a;
+    public struct Info
+    {
+        public float a;
 
-		public float b;
+        public float b;
 
-		public float c;
-	}
+        public float c;
+    }
 }

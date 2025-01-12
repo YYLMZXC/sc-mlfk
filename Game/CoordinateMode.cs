@@ -1,9 +1,9 @@
 namespace Game
 {
-	public enum CoordinateMode
-	{
-		Default,
-		Command,
-		Player
-	}
+    public enum CoordinateMode
+    {
+        Default,
+        Command,
+        Player
+    }
 }

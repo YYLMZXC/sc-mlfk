@@ -1,15 +1,15 @@
 namespace Game
 {
-	public class ScreenPattern
-	{
-		public string Name;
+    public class ScreenPattern
+    {
+        public string Name;
 
-		public string Texture;
+        public string Texture;
 
-		public Widget Widget;
+        public Widget Widget;
 
-		public int Layer;
+        public int Layer;
 
-		public float OutTime;
-	}
+        public float OutTime;
+    }
 }

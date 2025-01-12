@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="#命令方块联机适用">
+      <HintPath>..\联机版-命令方块阉割版\#命令方块联机适用.dll</HintPath>
+    </Reference>
     <Reference Include="Engine">
       <HintPath>dll\Engine.dll</HintPath>
     </Reference>

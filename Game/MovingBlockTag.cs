@@ -2,12 +2,12 @@ using Engine;
 
 namespace Game
 {
-	public class MovingBlockTag
-	{
-		public string Name;
+    public class MovingBlockTag
+    {
+        public string Name;
 
-		public CoordDirection Face;
+        public CoordDirection Face;
 
-		public Point3 Axis;
-	}
+        public Point3 Axis;
+    }
 }

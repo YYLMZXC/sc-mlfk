@@ -1,17 +1,17 @@
 namespace LibPixz2
 {
-	public struct ComponentInfo
-	{
-		public byte id;
+    public struct ComponentInfo
+    {
+        public byte id;
 
-		public byte samplingFactorX;
+        public byte samplingFactorX;
 
-		public byte samplingFactorY;
+        public byte samplingFactorY;
 
-		public byte quantTableId;
+        public byte quantTableId;
 
-		public byte dcHuffmanTable;
+        public byte dcHuffmanTable;
 
-		public byte acHuffmanTable;
-	}
+        public byte acHuffmanTable;
+    }
 }
